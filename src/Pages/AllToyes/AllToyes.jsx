@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ToyesCard from './ToyesCard';
 
 const AllToyes = () => {
+
+    const [toyes,setToyes] = useState({})
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/allToyes')
+        .then(res=>res.json())
+        .then(data=>setToyes(data))
+    },[])
+
     return (
-        <div>
-            <h2>All Toyes</h2>
-        </div>
+       <>
+       {
+          toyes.map(toye=><ToyesCard
+          toye={toye}
+          ></ToyesCard>)
+       }
+       </>
     );
 };
 
