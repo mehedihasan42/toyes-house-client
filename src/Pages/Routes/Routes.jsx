@@ -7,6 +7,7 @@ import Blogs from "../Blogs/Blogs";
 import AllToyes from "../AllToyes/AllToyes";
 import MyToyes from "../MyToyes/MyToyes";
 import AddToy from "../AddToy/AddToy";
+import PrivetRoutes from "./PrivetRoutes";
 
 const router = createBrowserRouter([
     {
@@ -35,11 +36,11 @@ const router = createBrowserRouter([
         },
         {
           path:'/myToyes',
-          element:<MyToyes></MyToyes>
+          element:<PrivetRoutes><MyToyes></MyToyes></PrivetRoutes>
         },
         {
           path:'/addToy',
-          element:<AddToy></AddToy>
+          element:<PrivetRoutes><AddToy></AddToy></PrivetRoutes>
         }
       ]
     },
