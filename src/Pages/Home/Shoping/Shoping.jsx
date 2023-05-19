@@ -11,7 +11,7 @@ const Shoping = () => {
     return (
       <div className='my-8'>
        <h2 className='font-bold lg:font-extrabold text-xl bg-slate-300 mx-auto w-36 rounded p-4'>Shop Now</h2>
-      <div className='w-96 mx-auto'>
+      <div className='w-2/3 mx-auto'>
         <Tabs>
     <TabList>
       <Tab>Title 1</Tab>
