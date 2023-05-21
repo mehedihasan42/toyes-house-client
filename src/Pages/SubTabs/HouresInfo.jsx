@@ -14,7 +14,7 @@ const HouresInfo = ({info}) => {
           <p>Category:{category}</p>
           <p>Price:{price}</p>
           <div className="card-actions justify-end">
-            <Link className="btn btn-goest" to={`/horses/${_id}`}><FaArrowAltCircleRight/></Link>
+            <Link className="btn btn-goest" to={`/horseDetails/${_id}`}><FaArrowAltCircleRight/></Link>
           </div>
         </div>
       </div>

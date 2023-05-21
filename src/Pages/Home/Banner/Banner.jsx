@@ -12,7 +12,6 @@ const Banner = () => {
     <div>
       <h1 className="text-2xl text-center mt-8 lg:mt-2 lg:text-5xl font-bold lg:mr-52">ToysHouse</h1>
       <p className="py-6">Different types of animal toys are here</p>
-      <button className="btn btn-primary">Get Started</button>
     </div>
   </div>
 </div>

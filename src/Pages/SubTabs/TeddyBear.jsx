@@ -6,7 +6,7 @@ const TeddyBear = () => {
   const [infos,setInfos] = useState([])
 
   useEffect(()=>{
-    fetch('http://localhost:5000/tadyBear')
+    fetch('https://toyes-house-server.vercel.app/tadyBear')
     .then(res=>res.json())
     .then(data=>setInfos(data))
   },[])

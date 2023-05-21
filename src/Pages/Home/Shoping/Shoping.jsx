@@ -14,9 +14,9 @@ const Shoping = () => {
       <div className='w-2/3 mx-auto'>
         <Tabs>
     <TabList>
-      <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
-      <Tab>Title 3</Tab>
+      <Tab>Cat Toyes</Tab>
+      <Tab>Horse Toyes</Tab>
+      <Tab>Taddy Toyes</Tab>
     </TabList>
 
     <TabPanel>

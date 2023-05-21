@@ -14,7 +14,7 @@ const CatInfo = ({info}) => {
           <p>Category:{category}</p>
           <p>Price:{price}</p>
           <div className="card-actions justify-end">
-            <Link className="btn btn-goest" to={`/cats/${_id}`}><FaArrowAltCircleRight/></Link>
+            <Link className="btn btn-goest" to={`/catDetails/${_id}`}><FaArrowAltCircleRight/></Link>
           </div>
         </div>
       </div>

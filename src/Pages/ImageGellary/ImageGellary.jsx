@@ -2,7 +2,7 @@ import React from 'react';
 
 const ImageGellary = () => {
     return (
-       <div className='mt-4 lg:mt-8'>
+       <div className='mt-4 lg:mt-8 bg-base-200 py-20'>
          <div>
            <h2 className='font-bold lg:font-extrabold text-xl bg-slate-300 mx-auto w-64 rounded p-4'>Most choiceable toyes</h2>
         </div>

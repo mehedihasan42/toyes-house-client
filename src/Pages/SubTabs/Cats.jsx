@@ -6,7 +6,7 @@ const Cats = () => {
   const [infos,setInfos] = useState([])
 
   useEffect(()=>{
-    fetch('http://localhost:5000/cats')
+    fetch('https://toyes-house-server.vercel.app/cats')
     .then(res=>res.json())
     .then(data=>setInfos(data))
   },[])

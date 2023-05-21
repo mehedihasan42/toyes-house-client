@@ -1,12 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from "react-icons/Fc";
 import { AuthContext } from '../AuthProvider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const { signIn,handleGoogleAuthProvider  } = useContext(AuthContext)
+  const navigate = useNavigate()
+  const location = useLocation()
   const [errorMessage, setErrorMessage] = useState("");
+  console.log(location)
+  const from = location.state?.from?.pathname || '/';
+
 
   const handleLogIn = event => {
     event.preventDefault()
@@ -14,11 +19,12 @@ const Login = () => {
     const email = from.email.value;
     const password = from.password.value;
     console.log(email,password)
-
+    
     signIn(email,password)
     .then(result=>{
       const user = result.user;
-      console.log(user)
+      console.log(user);
+      navigate(from)  //______________________________________Problem
     })
     .catch(error=>{
       const errorMessage = error.message;
@@ -31,6 +37,7 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       console.log(user)
+      navigate(from)
     })
     .catch(error=>{
       console.log(error)

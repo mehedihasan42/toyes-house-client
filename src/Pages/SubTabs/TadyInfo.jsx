@@ -14,7 +14,7 @@ const TadyInfo = ({info}) => {
           <p>Category:{category}</p>
           <p>Price:{price}</p>
           <div className="card-actions justify-end">
-            <Link className="btn btn-goest" to={`/tadyBear${_id}`}><FaArrowAltCircleRight/></Link>
+            <Link className="btn btn-goest" to={`/tadyDetails/${_id}`}><FaArrowAltCircleRight/></Link>
           </div>
         </div>
       </div>

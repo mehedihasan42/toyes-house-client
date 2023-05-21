@@ -8,6 +8,11 @@ import AllToyes from "../AllToyes/AllToyes";
 import MyToyes from "../MyToyes/MyToyes";
 import AddToy from "../AddToy/AddToy";
 import PrivetRoutes from "./PrivetRoutes";
+import CatDetails from "../../Details/CatDetails";
+import HorseDetails from "../../Details/HorseDetails";
+import TadyBearDetails from "../../Details/TadyBearDetails";
+import Error from "../Error";
+import ToyesDetails from "../AllToyes/ToyesDetails";
 
 const router = createBrowserRouter([
     {
@@ -35,15 +40,40 @@ const router = createBrowserRouter([
           element:<AllToyes></AllToyes>
         },
         {
+          path:'/allToyes/:id',
+          element:<PrivetRoutes><ToyesDetails></ToyesDetails></PrivetRoutes>,
+          loader:({params})=>fetch(`https://toyes-house-server.vercel.app/allToyes/${params.id}`)
+        },
+        {
           path:'/myToyes',
           element:<PrivetRoutes><MyToyes></MyToyes></PrivetRoutes>
         },
         {
           path:'/addToy',
           element:<PrivetRoutes><AddToy></AddToy></PrivetRoutes>
-        }
-      ]
+        },
+       {
+        path:"/catDetails/:id",
+        element:<PrivetRoutes><CatDetails></CatDetails></PrivetRoutes>,
+        loader:({params})=> fetch(`https://toyes-house-server.vercel.app/cats/${params.id}`)
+       },
+       {
+        path:"/horseDetails/:id",
+        element:<PrivetRoutes><HorseDetails></HorseDetails></PrivetRoutes>,
+        loader:({params})=> fetch(`https://toyes-house-server.vercel.app/horses/${params.id}`)
+       },
+       {
+        path:"/tadyDetails/:id",
+        element:<PrivetRoutes><TadyBearDetails></TadyBearDetails></PrivetRoutes>,
+        loader:({params})=> fetch(`https://toyes-house-server.vercel.app/tadyBear/${params.id}`)
+       }
+      ],
+
     },
+    {
+      path:"*",
+      element:<Error></Error>
+     }
   ]);
 
   export default router;
