@@ -16,15 +16,25 @@ const AddToy = () => {
     const price = form.price.value;
     const quantity = form.quantity.value;
     const details = form.details.value;
-      const order = {
+      const adding = {
         productName,picture,seller,
            email,
            price,
            quantity,
            details
        }
-       console.log(order)
-    
+       console.log(adding)
+    fetch('https://dynamic-sfogliatella-66b4ae.netlify.app/adding',{
+      method:'POST',
+      headers:{
+       'content-type':'application/json'
+      },
+      body:JSON.stringify(adding)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+    })
   }
 
   
