@@ -23,10 +23,11 @@ const MyToyes = () => {
           <thead>
             <tr>
               <th>
+                Product
               </th>
-              <th>Name</th>
-              <th>Job</th>
+              <th>Seller Name</th>
               <th>Price</th>
+              <th>...</th>
               <th></th>
             </tr>
           </thead>

@@ -4,8 +4,6 @@ const MyToyesRow = ({add}) => {
     const {email,seller,picture,productName,price} =add;
     return (
             <tr>
-              <th>
-              </th>
               <td>
                 <div className="flex items-center space-x-3">
                   <div className="avatar">
@@ -24,7 +22,7 @@ const MyToyesRow = ({add}) => {
                 <br/>
                 <span className="badge badge-ghost badge-sm">{email}</span>
               </td>
-              <td>{price}</td>
+              <td>${price}</td>
               <th>
                 <button className="btn btn-ghost btn-xs">details</button>
               </th>
