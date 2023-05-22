@@ -10,6 +10,7 @@ const About = () => {
              want to be a reliable source for parents, caregivers, and educators to find toys that align with 
              their values and contribute to children's holistic development.</p>
              <img className='w-2/3 lg:w-1/3 h-96 mx-auto rounded' src="https://i.ibb.co/0mmfXrk/ddtcutyv.jpg" alt="" />
+             <h2>commit</h2>
         </div>
     );
 };
