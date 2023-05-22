@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { FcGoogle } from "react-icons/Fc";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-h2fff
 
 const Login = () => {
 
