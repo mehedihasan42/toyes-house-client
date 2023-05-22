@@ -24,7 +24,7 @@ const AddToy = () => {
            details
        }
        console.log(adding)
-    fetch('https://dynamic-sfogliatella-66b4ae.netlify.app/adding',{
+    fetch('https://toyes-house-server.vercel.app/adding',{
       method:'POST',
       headers:{
        'content-type':'application/json'
@@ -33,11 +33,9 @@ const AddToy = () => {
     })
     .then(res=>res.json())
     .then(data=>{
-      console.log(data)
+      console.log(data);
     })
   }
-
-  
 
     return (
         <div className="hero min-h-screen bg-base-200">

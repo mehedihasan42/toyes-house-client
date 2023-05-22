@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         {
           path:'/allToyes/:id',
           element:<PrivetRoutes><ToyesDetails></ToyesDetails></PrivetRoutes>,
-          loader:({params})=>fetch(`https://toyes-house-server.vercel.app/allToyes/${params.id}`)
+          loader:({params})=>fetch(`http://localhost:5000/allToyes/${params.id}`)
         },
         {
           path:'/myToyes',
@@ -55,17 +55,17 @@ const router = createBrowserRouter([
        {
         path:"/catDetails/:id",
         element:<PrivetRoutes><CatDetails></CatDetails></PrivetRoutes>,
-        loader:({params})=> fetch(`https://toyes-house-server.vercel.app/cats/${params.id}`)
+        loader:({params})=> fetch(`http://localhost:5000/cats/${params.id}`)
        },
        {
         path:"/horseDetails/:id",
         element:<PrivetRoutes><HorseDetails></HorseDetails></PrivetRoutes>,
-        loader:({params})=> fetch(`https://toyes-house-server.vercel.app/horses/${params.id}`)
+        loader:({params})=> fetch(`http://localhost:5000/horses/${params.id}`)
        },
        {
         path:"/tadyDetails/:id",
         element:<PrivetRoutes><TadyBearDetails></TadyBearDetails></PrivetRoutes>,
-        loader:({params})=> fetch(`https://toyes-house-server.vercel.app/tadyBear/${params.id}`)
+        loader:({params})=> fetch(`http://localhost:5000/tadyBear/${params.id}`)
        }
       ],
 
