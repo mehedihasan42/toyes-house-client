@@ -8,7 +8,7 @@ const MyToyes = () => {
     const {user} = useContext(AuthContext)
     const [added,setAdded] = useState([])
 
-    const url = `http://localhost:5000/adding?email=${user?.email}`;
+    const url = `https://toyes-house-server.vercel.app/adding?email=${user?.email}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -25,7 +25,7 @@ const MyToyes = () => {
      )
  
       if(procced){
-         fetch(`http://localhost:5000/adding/${id}`,{
+         fetch(`https://toyes-house-server.vercel.app/adding/${id}`,{
            method:'DELETE',
  
          })
@@ -48,7 +48,7 @@ const MyToyes = () => {
    }
 
    const handleUpdate = id =>{
-    fetch(`http://localhost:5000/adding/${id}`,{
+    fetch(`https://toyes-house-server.vercel.app/adding/${id}`,{
       method:'PATCH',
       headers:{
         'content-type':'application/json'
