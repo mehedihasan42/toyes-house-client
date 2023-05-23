@@ -42,7 +42,7 @@ const router = createBrowserRouter([
         {
           path:'/allToyes/:id',
           element:<PrivetRoutes><ToyesDetails></ToyesDetails></PrivetRoutes>,
-          loader:({params})=>fetch(`https://toyes-house-server.vercel.app/allToyes/${params.id}`)
+          loader:({params})=>fetch(`https://toyes-house-server.vercel.app/adding/${params.id}`)
         },
         {
           path:'/myToyes',

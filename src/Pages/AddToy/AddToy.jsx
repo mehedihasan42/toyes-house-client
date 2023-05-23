@@ -49,13 +49,13 @@ const AddToy = () => {
                 <label className="label">
                   <span className="label-text">Picture URL</span>
                 </label>
-                <input name='picture' type="text" placeholder="Picture URL"  className="input lg:mx-2 lg:w-64 input-bordered" />
+                <input name='picture' type="text" placeholder="Picture URL"  className="input lg:mx-2 lg:w-64 input-bordered" required/>
               </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Product Name</span>
                 </label>
-                <input name='productName' type="text" placeholder="Product Name"  className="input lg:w-64 input-bordered" />
+                <input name='productName' type="text" placeholder="Product Name"  className="input lg:w-64 input-bordered" required/>
               </div>
              <div className="form-control">
                 <label className="label">
@@ -79,7 +79,7 @@ const AddToy = () => {
                 <label className="label">
                   <span className="label-text">Price</span>
                 </label>
-                <input type="text" name='price' placeholder="Price"  className="input lg:w-64 input-bordered" />
+                <input type="text" name='price' placeholder="Price"  className="input lg:w-64 input-bordered" required/>
               </div>
              <div className="form-control">
                 <label className="label">

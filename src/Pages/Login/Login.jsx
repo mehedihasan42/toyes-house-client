@@ -10,8 +10,8 @@ const Login = () => {
   const location = useLocation()
   const [errorMessage, setErrorMessage] = useState("");
   console.log(location)
-  const from = location.state?.from?.pathname || '/';
-
+  const path = location.state?.from?.pathname || '/';
+ 
 
   const handleLogIn = event => {
     event.preventDefault()
@@ -24,7 +24,8 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       console.log(user);
-      navigate(from)  //______________________________________Problem
+      console.log(from)
+      navigate(path)  //______________________________________Problem
     })
     .catch(error=>{
       const errorMessage = error.message;
@@ -37,7 +38,7 @@ const Login = () => {
     .then(result=>{
       const user = result.user;
       console.log(user)
-      navigate(from)
+      navigate(path)
     })
     .catch(error=>{
       console.log(error)

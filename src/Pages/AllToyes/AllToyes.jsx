@@ -6,7 +6,7 @@ const AllToyes = () => {
     const [toyes,setToyes] = useState([])
 
     useEffect(()=>{
-        fetch('https://toyes-house-server.vercel.app/allToyes')
+        fetch('https://toyes-house-server.vercel.app/adding')
         .then(res=>res.json())
         .then(data=>setToyes(data))
     },[])
@@ -16,15 +16,13 @@ const AllToyes = () => {
         <table className="table w-full">
           {/* head */}
           <thead>
-            <tr>
-               
-              <th>Toyes Name</th>
-              <th>Price</th>
-              <th>Rating</th>
-              <th>quantity</th>
-              <th>subCategory</th>
-              <th>Details</th>
-            </tr>
+          <tr>
+        
+        <th>Product Name</th>
+        <th>Seller</th>
+        <th>Quantity</th>
+        <th></th>
+      </tr>
           </thead>
           <tbody>
             {/* row 1 */}

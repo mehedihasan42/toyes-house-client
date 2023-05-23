@@ -19,7 +19,7 @@ const Customar = () => {
           {
               reviews.map(review => <div>
 
-                  <div className="card w-96 h-96 lg:mx-auto bg-base-100 shadow-xl">
+                  <div className="card mx-auto mt-4 w-80 lg:w-96 h-96 lg:mx-auto bg-base-100 shadow-xl">
                       <figure><img src={review.image} className='w-96 h-60' alt="Shoes" /></figure>
                       <div className="card-body">
                           <h2 className="card-title">{review.name}</h2>

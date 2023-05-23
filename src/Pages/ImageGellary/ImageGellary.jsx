@@ -4,9 +4,9 @@ const ImageGellary = () => {
     return (
        <div className='mt-4 lg:mt-8 bg-base-200 py-20'>
          <div>
-           <h2 className='font-bold lg:font-extrabold text-xl bg-slate-300 mx-auto w-64 rounded p-4'>Most choiceable toyes</h2>
+           <h2 className='font-bold lg:font-extrabold text-xl bg-slate-300 mx-auto w-56 lg:w-64 rounded p-4'>Most choiceable toyes</h2>
         </div>
-        <div className='grid lg:grid-cols-3  my-4'>
+        <div className='grid lg:grid-cols-3 w-64  my-4'>
           <div className='mx-auto w-96 rounded-md mt-4 bg-stone-300 p-4'>
           <img src="https://i.ibb.co/d5g9xLy/tot-1.jpg" alt="" />
           <p className='text-center'>Bat Tady</p>
