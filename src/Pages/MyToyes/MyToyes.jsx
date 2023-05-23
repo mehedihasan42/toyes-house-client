@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import MyToyesRow from './MyToyesRow';
+import Swal from 'sweetalert2'
 
 const MyToyes = () => {
 
@@ -16,12 +17,60 @@ const MyToyes = () => {
         })
     },[])
 
+    const handleDelete = id =>{
+      const procced = Swal.fire(
+       'Are you sure for delete it!',
+       'You clicked the button!',
+       'question'
+     )
+ 
+      if(procced){
+         fetch(`http://localhost:5000/adding/${id}`,{
+           method:'DELETE',
+ 
+         })
+         .then(res=>res.json())
+         .then(data=>{
+           console.log(data)
+           if(data.deletedCount > 0){
+             Swal.fire(
+               'Deleted Success',
+               'You clicked the button!',
+               'seccess'
+             );
+                const remaining = added.filter(add=>{
+                  add._id !== id
+                })
+                setAdded(remaining)
+           }
+         })
+      }
+   }
+
+   const handleUpdate = id =>{
+    fetch(`http://localhost:5000/adding/${id}`,{
+      method:'PATCH',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify({status:'confirm'})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data)
+      if(data.modifiedCount > 0){
+
+      }
+    })
+   }
+
     return (
         <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
           <thead>
             <tr>
+            
               <th>
                 Product
               </th>
@@ -36,6 +85,8 @@ const MyToyes = () => {
              added.map(add=><MyToyesRow
              key={add._id}
              add={add}
+             handleDelete={handleDelete}
+             handleUpdate={handleUpdate}
              ></MyToyesRow>)
            }
           </tbody>
