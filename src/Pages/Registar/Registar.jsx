@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from "react-icons/Fc";
 import { AuthContext } from '../AuthProvider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Registar = () => {
 
-  const {createUser} = useContext(AuthContext)
+  const {createUser,updateProfilePicture} = useContext(AuthContext)
   const [errorMessage, setErrorMessage] = useState("");
+  // const navigate = useNavigate()
 
    const handleSignUp = event =>{
     event.preventDefault()
@@ -14,18 +15,28 @@ const Registar = () => {
     const name = from.name.value;
     const email = from.email.value;
     const password = from.password.value;
-    const photoUrl = from.photoUrl.value;
-    console.log(name,email,password,photoUrl)
+    const photo = from.photo.value;
+    console.log(name,email,password,photo)
    
     createUser(email,password)
     .then(result=>{
       const user = result.user;
       console.log(user)
+      updateProfilePicture(name,photo)
+      .then(()=>{
+        console.log('Update profile success')
+        reset()
+      })
+      .catch(error=>console.log(error))
     })
     .catch(error=>{
       const errorMessage = error.message;
       setErrorMessage(errorMessage);
     })
+
+  
+
+    // navigate('/')
    }
 
     return (
@@ -60,7 +71,7 @@ const Registar = () => {
                 <label className="label">
                   <span className="label-text">Photo URL</span>
                 </label>
-                <input type="text" name='photoUrl' placeholder="Photo URL" className="input input-bordered" />
+                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" />
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Registar</button>

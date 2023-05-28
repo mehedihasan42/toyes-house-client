@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, updateProfile, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth"
 import app from '../../Firebase/Firebase.config';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -35,6 +35,12 @@ const AuthProvider = ({children}) => {
         return signOut(auth)
     }
 
+    const updateProfilePicture = (name,photo) =>{
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+          })
+    }
+
     useEffect(()=>{
        const unsubscribe = onAuthStateChanged(auth,loggedUser =>{
         //    console.log('manage user on auth state change',loggedUser)
@@ -53,7 +59,8 @@ const AuthProvider = ({children}) => {
        signIn,
        logOut,
     //    location,
-       handleGoogleAuthProvider
+       handleGoogleAuthProvider,
+       updateProfilePicture
     }
 
     return (
@@ -64,3 +71,5 @@ const AuthProvider = ({children}) => {
 };
 
 export default AuthProvider;
+
+/**/

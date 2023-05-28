@@ -6,6 +6,8 @@ import Horse from '../../SubTabs/Horse';
 import TeddyBear from '../../SubTabs/teddyBear';
 
 
+
+
 const Shoping = () => {
 
     return (
@@ -19,7 +21,7 @@ const Shoping = () => {
       <Tab>Taddy Toyes</Tab>
     </TabList>
 
-    <TabPanel>
+    <TabPanel >
      <Cats></Cats>
     </TabPanel>
     <TabPanel>

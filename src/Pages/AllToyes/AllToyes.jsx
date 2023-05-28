@@ -38,9 +38,6 @@ const AllToyes = () => {
           </tbody>
         </table>
       </div>
-    //    <>
-    
-    //    </>
     );
 };
 

@@ -13,6 +13,7 @@ import HorseDetails from "../../Details/HorseDetails";
 import TadyBearDetails from "../../Details/TadyBearDetails";
 import Error from "../Error";
 import ToyesDetails from "../AllToyes/ToyesDetails";
+import ImageGellary from "../ImageGellary/ImageGellary";
 
 const router = createBrowserRouter([
     {

@@ -7,7 +7,7 @@ const CatInfo = ({info}) => {
     const { _id,name,picture,category,price } = info;
 
     return (
-        <div className="card w-72 mx-auto my-4 lg:w-96 lg:mx-4 bg-base-100 shadow-xl">
+        <div data-aos="fade-right" className="card w-72 mx-auto my-4 lg:w-96 lg:mx-4 bg-base-100 shadow-xl">
         <figure><img src={picture} className='lg:h-52' alt="Shoes" /></figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
