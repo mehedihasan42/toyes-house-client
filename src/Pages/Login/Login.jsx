@@ -70,7 +70,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="bg-slate-700">Login</button>
                 <p><small>New in ToyesHouse! Please <Link className='text-primary' to='/registar'>SignUp</Link></small></p>
                 {errorMessage && <p className='text-red-600 text-lg'>Your email or password is worng</p>}
               </div>

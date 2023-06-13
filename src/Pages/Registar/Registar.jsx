@@ -74,7 +74,7 @@ const Registar = () => {
                 <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Registar</button>
+                <button className="bg-slate-700">Registar</button>
                 <p><small>Already have an account! Please <Link className='text-primary' to='/login'>Login</Link></small></p>
                 {errorMessage && <p className='text-red-600 text-lg'>Invalid email account</p>}
               </div>
