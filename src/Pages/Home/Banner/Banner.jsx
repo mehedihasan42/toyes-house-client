@@ -4,7 +4,7 @@ import React from 'react';
 const Banner = () => {
 
   return (
-    <div className="hero min-h-screen relative bg-gradient-to-br from-black to-gray-800" >
+    <div className="hero min-h-screen relative bg-gradient-to-br from-black to-gray-700" >
         <img src="https://i.ibb.co/7QKn8qY/background-img.jpg" className="w-full h-full object-cover absolute mix-blend-overlay" />
       {/* <div className="absolute" style={{ backgroundImage: `url()` }}></div> */}
       <div className="hero-content text-neutral-content">

@@ -4,9 +4,12 @@ import ImageGellary from '../../ImageGellary/ImageGellary';
 import Shoping from '../Shoping/Shoping';
 import Customar from '../../Customar/Customar';
 import About from '../About/About';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
     return (
+      <>
+      <Helmet><title>Toyes House</title></Helmet>
         <div>
             <Banner></Banner>
             <About></About>
@@ -14,6 +17,7 @@ const Home = () => {
             <Shoping></Shoping>
             <Customar></Customar>
         </div>
+      </>
     );
 };
 

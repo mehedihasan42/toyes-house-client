@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import MyToyesRow from './MyToyesRow';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet';
 
 const MyToyes = () => {
 
@@ -65,6 +66,8 @@ const MyToyes = () => {
    }
 
     return (
+       <>
+         <Helmet><title>Toyes House | My Toyes</title></Helmet>
         <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -94,6 +97,7 @@ const MyToyes = () => {
          
         </table>
       </div>
+       </>
     );
 };
 

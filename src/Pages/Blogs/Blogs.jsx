@@ -1,8 +1,11 @@
 import React from 'react';
 import style from './Blogs.css'
+import { Helmet } from 'react-helmet';
 
 const Blogs = () => {
     return (
+       <>
+        <Helmet><title>Toyes House | Blogs</title></Helmet>
         <div>
             <div className='bg-gray-200 rounded m-4 p-4'>
                 <p className='text-red-500 font-bold'>What is an access token and refresh token? How do they work and where should we store them on the client-side?</p>
@@ -95,6 +98,7 @@ const Blogs = () => {
                   transformations, aggregations, and computations within the database.</p>
             </div>
         </div>
+       </>
     );
 };
 

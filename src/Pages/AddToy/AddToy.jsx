@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const AddToy = () => {
 
@@ -38,6 +39,8 @@ const AddToy = () => {
   }
 
     return (
+       <>
+         <Helmet><title>Toyes House | Add a toy</title></Helmet>
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
@@ -108,6 +111,7 @@ const AddToy = () => {
           </div>
         </div>
       </div>
+       </>
     );
 };
 

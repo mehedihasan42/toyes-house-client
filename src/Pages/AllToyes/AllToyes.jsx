@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ToyesCard from './ToyesCard';
+import { Helmet } from 'react-helmet';
 
 const AllToyes = () => {
 
@@ -12,6 +13,8 @@ const AllToyes = () => {
     },[])
 
     return (
+       <>
+       <Helmet><title>Toyes House | All Toyes</title></Helmet>
         <div className="overflow-x-auto">
         <table className="table w-full">
           {/* head */}
@@ -38,6 +41,7 @@ const AllToyes = () => {
           </tbody>
         </table>
       </div>
+       </>
     );
 };
 
