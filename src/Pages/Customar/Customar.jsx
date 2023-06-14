@@ -15,7 +15,7 @@ const Customar = () => {
 
     return (
 
-       <div className='lg:my-20 bg-base-200 py-12'>
+       <div className='lg:my-20 bg-slate-200 py-12'>
        <h2 className='font-bold lg:font-extrabold text-xl bg-slate-300 mx-auto w-52 rounded p-4'>Customer Review</h2>
         <div className='grid lg:grid-cols-3 my-8 '>
             
