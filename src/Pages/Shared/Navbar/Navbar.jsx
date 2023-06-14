@@ -33,6 +33,11 @@ const Navbar = () => {
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
             {navItems}
+            {
+          user?.email ? 
+          <button className='btn btn-outline ml-2' onClick={handleLogOut}>Logout</button>:
+        <Link to='/login' className='btn btn-outline'>Login</Link>
+      }
           </ul>
         </div>
         <img src="https://i.ibb.co/swDdjhz/Toyes-House.png" className='w-14 lg:w-20 rounded-full' alt="" />
@@ -43,13 +48,15 @@ const Navbar = () => {
           {navItems}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end hidden lg:flex">
         {user?.email ? <a className="btn"><FaUserAlt /></a>: null}
+     
         {
           user?.email ? 
           <button className='btn ml-2' onClick={handleLogOut}>Logout</button>:
         <Link to='/login' className='btn'>Login</Link>
-        }
+      }
+      
       </div>
     </div>
   );

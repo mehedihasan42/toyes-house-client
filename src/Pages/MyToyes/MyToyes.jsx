@@ -78,7 +78,6 @@ const MyToyes = () => {
           {/* head */}
           <thead>
             <tr>
-            
               <th>
                 Product
               </th>

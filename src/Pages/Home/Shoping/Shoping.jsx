@@ -12,7 +12,7 @@ const Shoping = () => {
 
     return (
       <div className='my-8'>
-       <h2 className='font-bold lg:font-extrabold text-xl bg-slate-300 mx-auto w-36 rounded p-4'>Shop Now</h2>
+       <h2 className='font-bold  mt-20 lg:font-extrabold text-xl bg-slate-300 mx-auto w-36 rounded p-4'>Shop Now</h2>
       <div className='lg:w-2/3 lg:mx-auto'>
         <Tabs>
     <TabList className="grid grid-cols-3  w-2/3 lg:w-2/3 mx-auto my-8 space-x-4 lg:space-x-4">
