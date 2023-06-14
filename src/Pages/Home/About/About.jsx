@@ -9,7 +9,7 @@ const About = () => {
              we strive to provide options that cater to different interests, abilities, and learning styles. We
              want to be a reliable source for parents, caregivers, and educators to find toys that align with 
              their values and contribute to children's holistic development.</p>
-             <img className='w-full h-64 lg:w-1/3 lg:h-96 lg:mx-auto rounded' src="https://i.ibb.co/0mmfXrk/ddtcutyv.jpg" alt="" />
+             <img className='w-full h-64 lg:w-1/3 lg:h-96 lg:mx-auto rounded' src="https://media.istockphoto.com/id/1193569086/photo/plastic-zoo-animal-toys.jpg?s=2048x2048&w=is&k=20&c=-HkZMS2_upB6krv5tgA-gKU1wmQU7qLSbcTJAf4OMnU=" alt="" />
         </div>
     );
 };
