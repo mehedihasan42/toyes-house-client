@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { FcGoogle } from "react-icons/Fc";
+import { FaGoogle } from "react-icons/Fa";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
+
 const Registar = () => {
 
-  const {createUser,updateProfilePicture} = useContext(AuthContext)
+  const {createUser,updateProfilePicture,handleGoogleAuthProvider} = useContext(AuthContext)
   const [errorMessage, setErrorMessage] = useState("");
   // const navigate = useNavigate()
 
@@ -33,11 +34,20 @@ const Registar = () => {
       const errorMessage = error.message;
       setErrorMessage(errorMessage);
     })
-
-  
-
     // navigate('/')
    }
+
+   const handleGoogleLogin = () =>{
+    handleGoogleAuthProvider()
+    .then(result=>{
+      const user = result.user;
+      console.log(user)
+      navigate(path)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+  }
 
     return (
         <div>
@@ -74,12 +84,14 @@ const Registar = () => {
                 <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" />
               </div>
               <div className="form-control mt-6">
-                <button className="bg-slate-700">Registar</button>
+                <button className="btn bg-slate-700">Registar</button>
                 <p><small>Already have an account! Please <Link className='text-primary' to='/login'>Login</Link></small></p>
                 {errorMessage && <p className='text-red-600 text-lg'>Invalid email account</p>}
               </div>
             </div>
            </form>
+           <div className="divider">OR</div>
+          <button onClick={handleGoogleLogin} className="btn btn-circle btn-outline my-2 mx-auto"><FaGoogle/></button>
           </div>
         </div>
       </div>

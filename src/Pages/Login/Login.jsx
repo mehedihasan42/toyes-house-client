@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { FcGoogle } from "react-icons/Fc";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
 
@@ -70,7 +71,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="bg-slate-700">Login</button>
+                <button className="btn bg-slate-700">Login</button>
                 <p><small>New in ToyesHouse! Please <Link className='text-primary' to='/registar'>SignUp</Link></small></p>
                 {errorMessage && <p className='text-red-600 text-lg'>Your email or password is worng</p>}
               </div>
@@ -78,8 +79,7 @@ const Login = () => {
           </form>
            
           <div className="divider">OR</div>
-          <button className='btn btn-outline btn-info'>Facebook</button>
-          <button onClick={handleGoogleLogin} className="btn btn-outline btn-success">Google</button>
+          <button onClick={handleGoogleLogin} className="btn btn-circle btn-outline my-2 mx-auto"><FaGoogle/></button>
           
         </div>
       </div>

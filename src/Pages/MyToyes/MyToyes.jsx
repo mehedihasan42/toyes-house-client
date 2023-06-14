@@ -9,14 +9,18 @@ const MyToyes = () => {
     const {user} = useContext(AuthContext)
     const [added,setAdded] = useState([])
 
+
     const url = `https://toyes-house-server.vercel.app/adding?email=${user?.email}`;
     useEffect(()=>{
+
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
             setAdded(data)
         })
     },[])
+
+
 
     const handleDelete = id =>{
       const procced = Swal.fire(
@@ -65,6 +69,7 @@ const MyToyes = () => {
     })
    }
 
+   
     return (
        <>
          <Helmet><title>Toyes House | My Toyes</title></Helmet>
