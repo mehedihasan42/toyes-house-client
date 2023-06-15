@@ -36,7 +36,7 @@ const Navbar = () => {
             {
               user?.email ?
                 <button className='btn btn-outline border-white text-white ml-2' onClick={handleLogOut}>Logout</button> :
-                <Link to='/login' className='btn btn-outline'>Login</Link>
+                <Link to='/login' className='btn btn-outline border-white text-white'>Login</Link>
             }
           </ul>
         </div>
