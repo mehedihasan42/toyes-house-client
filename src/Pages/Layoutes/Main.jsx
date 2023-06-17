@@ -5,14 +5,14 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
 
-    // const isAdmin = false;
+    const isAdmin = false;
 
     return (
         <div>
-          {/* {
-            isAdmin? 'Admin': 
-          } */}
-           <Navbar></Navbar>
+          {
+            isAdmin? 'Admin':  <Navbar></Navbar>
+          }
+          
            <Outlet></Outlet>
            <Footer></Footer>
         </div>

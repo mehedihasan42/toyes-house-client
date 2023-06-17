@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 const MyToyes = () => {
 
     const {user} = useContext(AuthContext)
+    console.log(user.email)
     const [added,setAdded] = useState([])
 
 

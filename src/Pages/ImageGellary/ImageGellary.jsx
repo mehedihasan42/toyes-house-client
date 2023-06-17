@@ -5,7 +5,7 @@ const ImageGellary = () => {
 
   return (
     <div className='my-10 py-16 mb-8 bg-slate-200'>
-      <h2 className='font-bold lg:font-extrabold mb-12 text-xl bg-slate-300 mx-auto w-44 rounded p-4'>Image Gellary</h2>
+      <h2 className='font-bold lg:font-extrabold mb-12 text-xl bg-slate-300 mx-auto w-44 rounded p-4'>Popular Toyes <span className='ml-8'>Pictures</span></h2>
  <div className='flex lg:ml-44 lg:space-x-8'>
   {/* g-1 */}
  <div data-aos="fade-right">
